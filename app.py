@@ -72,8 +72,7 @@ input_data = pd.concat([input_data.reset_index(drop=True), geo_encoded_df], axis
 input_data_scaled = scaler.transform(input_data)
 
 # predict churn
-prediction = model.predict(input_data_scaled)
-prediction_proba = prediction[0][0]
+prediction_proba = model.predict_proba(input_data_scaled)[0][1]
 
 st.write(f'Churn probability : {prediction_proba:.2f}')
 
