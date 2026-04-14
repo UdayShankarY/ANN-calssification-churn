@@ -6,12 +6,9 @@ import pandas as pd
 import pickle
 
 # Load the trained model
-# model = tf.keras.models.load_model('model.h5')
+model = tf.keras.models.load_model('model.h5')
 
 
-import pickle
-
-model = pickle.load(open("model.pkl", "rb"))
 
 
 
